@@ -1,7 +1,6 @@
 # History Aware Multimodal Transformer for Vision-and-Language Navigation
 
 This repository is the official implementation of [History Aware Multimodal Transformer for Vision-and-Language Navigation](https://arxiv.org/abs/2110.13309). 
-
 Project webpage: https://cshizhe.github.io/projects/vln_hamt.html
 
 Vision-and-language navigation (VLN) aims to build autonomous visual agents that follow instructions and navigate in real scenes. In this work, we introduce a History Aware Multimodal Transformer (HAMT) to incorporate a long-horizon history into multimodal decision making. HAMT efficiently encodes all the past panoramic observations via a hierarchical vision transformer. It, then, jointly combines text, history and current observation to predict the next action. We first train HAMT end-to-end using several proxy tasks including single-step action prediction and spatial relation prediction, and then use reinforcement learning to further improve the navigation policy. HAMT achieves new state of the art on a broad range of VLN tasks, including VLN with *fine-grained instructions* (R2R, RxR) *high-level instructions* (R2R-Last, REVERIE), *dialogs* (CVDN) as well as *long-horizon VLN* (R4R, R2R-Back).
@@ -71,11 +70,11 @@ bash scripts/run_cvdn.bash
 ## Citation
 If you find this work useful, please consider citing:
 ```
-@InProceedings{chen2021history,
-author = "Shizhe Chen and Pierre-Louis Guhur and Cordelia Schmid and Ivan Laptev",
-title  = "History Aware multimodal Transformer for Vision-and-Language Navigation",
-booktitle = "Neurips",
-year = "2021",
+@InProceedings{chen2021hamt,
+author       = {Chen, Shizhe and Guhur, Pierre-Louis and Schmid, Cordelia and Laptev, Ivan},
+title        = {History Aware multimodal Transformer for Vision-and-Language Navigation},
+booktitle    = {NeurIPS},
+year         = {2021},
 }
 ```
 
