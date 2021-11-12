@@ -1,0 +1,59 @@
+{
+    "model_config": "",
+    "checkpoint": null,
+    "output_dir": "",
+    "ob_random_kill_v": 0.3,
+    "ob_random_kill_a": 0.43,
+    "mrc_mask_prob": 0.15,
+    "max_txt_len": 60,
+    "train_batch_size": 1,
+    "val_batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 5e-05,
+    "valid_steps": 10,
+    "log_steps": 10,
+    "num_train_steps": 200000,
+    "optim": "rangerlars",
+    "betas": [
+        0.9,
+        0.98
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "grad_norm": 5.0,
+    "warmup_steps": 10000,
+    "seed": 0,
+    "fp16": false,
+    "n_workers": 1,
+    "pin_mem": true,
+
+    "train_datasets": {
+        "R2R": {
+            "name": "R2R",
+            "train_traj_files": ["datasets/R2R/annotations/pretrain/train.jsonl",
+                "datasets/R2R/annotations/pretrain/train_prevalent_generated.jsonl"],
+            "val_seen_traj_files": ["datasets/R2R/annotations/pretrain/val_seen.jsonl"], 
+            "val_unseen_traj_files": ["datasets/R2R/annotations/pretrain/val_unseen.jsonl"],
+            "img_ft_file": "datasets/R2R/features/pth_vit_base_patch16_224_imagenet.hdf5",
+            "scanvp_cands_file": "datasets/R2R/annotations/scanvp_candview_relangles.json",
+            "connectivity_dir": "datasets/R2R/connectivity",
+            "img_db_file": "datasets/R2R/features/panoimages.lmdb",
+            "tasks": [
+                "mlm",
+                "sap",
+                "sar",
+                "sprel",
+                "mrc",
+                "itm"
+            ],
+            "mix_ratio": [
+                5,
+                1,
+                1,
+                1,
+                2,
+                2
+            ]
+        }
+    }
+}

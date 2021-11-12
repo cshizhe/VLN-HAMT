@@ -1,0 +1,12 @@
+tqdm==4.62.0
+jsonlines==2.0.0
+timm==0.4.9
+h5py==3.1.0
+networkx==2.5.1
+easydict==1.9
+lmdb==1.2.1
+numpy==1.21.4
+Pillow==8.4.0
+progressbar33==2.4
+tensorboardX==2.4
+transformers==4.12.3
