@@ -1,6 +1,5 @@
 tqdm==4.62.0
 jsonlines==2.0.0
-timm==0.4.9
 h5py==3.1.0
 networkx==2.5.1
 easydict==1.9
