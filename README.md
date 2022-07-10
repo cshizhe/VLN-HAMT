@@ -19,6 +19,11 @@ conda create --name vlnhamt python=3.8.5
 conda activate vlnhamt
 pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
+
+# install timm
+git clone https://github.com/rwightman/pytorch-image-models.git
+cd pytorch-image-models
+git checkout 9cc7dda6e5fcbbc7ac5ba5d2d44050d2a8e3e38d
 ```
 3. Download data from [Dropbox](https://www.dropbox.com/sh/3a5j03u286px604/AABNp887W7_Fhgv13gUt4wzda?dl=0), including processed annotations, features and pretrained models. Put the data in `datasets' directory.
 
