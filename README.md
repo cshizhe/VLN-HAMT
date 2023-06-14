@@ -57,7 +57,7 @@ CUDA_VISIBLE_DEVICES='0,1,2,3' python -m torch.distributed.launch \
 
 Stage 2: Train ViT in an end-to-end manner 
 
-Change the config file as `pretrain_r2r_e2e.json'.
+Run `pretrain_src/main_r2r_image.py' and use the config file `pretrain_r2r_e2e.json'.
 
 
 ## Fine-tuning for sequential action prediction
