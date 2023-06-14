@@ -29,7 +29,7 @@ git checkout 9cc7dda6e5fcbbc7ac5ba5d2d44050d2a8e3e38d
 
 
 4. (Optional) If you want to train HAMT end-to-end, you should download [original Matterport3D data](https://github.com/niessner/Matterport).
-
+Use this [script](https://github.com/cshizhe/VLN-HAMT/blob/main/preprocess/build_image_lmdb.py) to extract panoramic images as the training data.
 
 ## Extracting features (optional)
 Scripts to extract visual features are in `preprocess` directory:
